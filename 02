@@ -1,0 +1,29 @@
+# Employee Salary Calculator
+
+print("----- Employee Salary Calculator -----")
+
+# Input employee details
+name = input("Enter Employee Name: ")
+
+basic_salary = float(input("Enter Basic Salary: "))
+hra = float(input("Enter HRA: "))
+da = float(input("Enter DA: "))
+other_allowance = float(input("Enter Other Allowances: "))
+
+# Calculate Gross Salary
+gross_salary = basic_salary + hra + da + other_allowance
+
+# Calculate Deductions
+pf = basic_salary * 0.12      # 12% Provident Fund
+tax = gross_salary * 0.10     # 10% Income Tax
+
+# Calculate Net Salary
+net_salary = gross_salary - (pf + tax)
+
+# Display Salary Details
+print("\n----- Salary Details -----")
+print("Employee Name :", name)
+print("Gross Salary  :", gross_salary)
+print("PF Deduction  :", pf)
+print("Tax Deduction :", tax)
+print("Net Salary    :", net_salary)
