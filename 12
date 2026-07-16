@@ -1,0 +1,31 @@
+# Mobile Recharge Billing
+
+print("----- Mobile Recharge Billing -----")
+
+# Input
+customer_name = input("Enter Customer Name: ")
+mobile_number = input("Enter Mobile Number: ")
+recharge_amount = float(input("Enter Recharge Amount (Rs.): "))
+
+# Calculate Discount/Cashback
+if recharge_amount >= 1000:
+    discount = recharge_amount * 0.20      # 20% Discount
+elif recharge_amount >= 500:
+    discount = recharge_amount * 0.10      # 10% Discount
+elif recharge_amount >= 200:
+    discount = recharge_amount * 0.05      # 5% Discount
+else:
+    discount = 0
+
+# Calculate Final Amount
+final_amount = recharge_amount - discount
+
+# Display Bill
+print("\n----- Recharge Bill -----")
+print("Customer Name     :", customer_name)
+print("Mobile Number     :", mobile_number)
+print("Recharge Amount   : Rs.", recharge_amount)
+print("Cashback/Discount : Rs.", discount)
+print("Final Amount      : Rs.", final_amount)
+
+print("\nRecharge Successful!")
