@@ -1,0 +1,23 @@
+# Library Fine Calculator
+
+print("----- Library Fine Calculator -----")
+
+# Input
+student_name = input("Enter Student Name: ")
+book_name = input("Enter Book Name: ")
+overdue_days = int(input("Enter Number of Overdue Days: "))
+
+# Calculate Fine
+if overdue_days <= 5:
+    fine = overdue_days * 2      # Rs.2 per day
+elif overdue_days <= 10:
+    fine = overdue_days * 5      # Rs.5 per day
+else:
+    fine = overdue_days * 10     # Rs.10 per day
+
+# Display Result
+print("\n----- Library Fine Details -----")
+print("Student Name :", student_name)
+print("Book Name    :", book_name)
+print("Overdue Days :", overdue_days)
+print("Fine Amount  : Rs.", fine)
