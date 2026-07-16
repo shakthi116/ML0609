@@ -1,0 +1,39 @@
+# Parking Fee Calculator
+
+print("----- Parking Fee Calculator -----")
+
+# Input
+owner_name = input("Enter Vehicle Owner Name: ")
+
+print("\nSelect Vehicle Type")
+print("1. Bike")
+print("2. Car")
+print("3. Bus")
+
+choice = int(input("Enter your choice (1-3): "))
+hours = int(input("Enter Parking Duration (hours): "))
+
+# Calculate parking fee
+if choice == 1:
+    vehicle = "Bike"
+    rate = 20
+elif choice == 2:
+    vehicle = "Car"
+    rate = 50
+elif choice == 3:
+    vehicle = "Bus"
+    rate = 100
+else:
+    print("Invalid Vehicle Type!")
+    exit()
+
+# Total fee
+total_fee = rate * hours
+
+# Display Result
+print("\n----- Parking Bill -----")
+print("Owner Name      :", owner_name)
+print("Vehicle Type    :", vehicle)
+print("Parking Hours   :", hours)
+print("Rate per Hour   : Rs.", rate)
+print("Total Parking Fee: Rs.", total_fee)
