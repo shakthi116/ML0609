@@ -1,0 +1,35 @@
+# Online Shopping Bill Calculator
+
+print("----- Online Shopping Bill Calculator -----")
+
+# Input customer details
+customer_name = input("Enter Customer Name: ")
+purchase_amount = float(input("Enter Purchase Amount (Rs.): "))
+
+# Calculate discount
+if purchase_amount >= 5000:
+    discount = purchase_amount * 0.20      # 20% Discount
+elif purchase_amount >= 3000:
+    discount = purchase_amount * 0.15      # 15% Discount
+elif purchase_amount >= 1000:
+    discount = purchase_amount * 0.10      # 10% Discount
+else:
+    discount = 0
+
+# Amount after discount
+amount_after_discount = purchase_amount - discount
+
+# Calculate GST (18%)
+gst = amount_after_discount * 0.18
+
+# Final bill
+total_bill = amount_after_discount + gst
+
+# Display bill
+print("\n----- Shopping Bill -----")
+print("Customer Name      :", customer_name)
+print("Purchase Amount    : Rs.", purchase_amount)
+print("Discount           : Rs.", discount)
+print("Amount After Discount : Rs.", amount_after_discount)
+print("GST (18%)          : Rs.", gst)
+print("Total Bill         : Rs.", total_bill)
