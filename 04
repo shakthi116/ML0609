@@ -1,0 +1,29 @@
+# ATM Cash Withdrawal System
+
+print("----- ATM Cash Withdrawal System -----")
+
+# Initial details
+correct_pin = 1234
+balance = 10000.0
+
+# User input
+pin = int(input("Enter your 4-digit PIN: "))
+
+# Verify PIN
+if pin == correct_pin:
+    print("PIN Verified Successfully!")
+    print("Available Balance: Rs.", balance)
+
+    amount = float(input("Enter Withdrawal Amount: Rs. "))
+
+    if amount <= 0:
+        print("Invalid withdrawal amount!")
+    elif amount > balance:
+        print("Insufficient Balance!")
+    else:
+        balance = balance - amount
+        print("Withdrawal Successful!")
+        print("Amount Withdrawn: Rs.", amount)
+        print("Remaining Balance: Rs.", balance)
+else:
+    print("Incorrect PIN! Access Denied.")
