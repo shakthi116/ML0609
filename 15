@@ -1,0 +1,23 @@
+# Weather Data Analyzer
+
+print("----- Weather Data Analyzer -----")
+
+# Create an empty list
+temperatures = []
+
+# Input temperatures for 7 days
+for i in range(7):
+    temp = float(input("Enter temperature for Day " + str(i + 1) + ": "))
+    temperatures.append(temp)
+
+# Calculate maximum, minimum, and average
+maximum = max(temperatures)
+minimum = min(temperatures)
+average = sum(temperatures) / len(temperatures)
+
+# Display results
+print("\n----- Weather Report -----")
+print("Temperatures :", temperatures)
+print("Maximum Temperature :", maximum, "°C")
+print("Minimum Temperature :", minimum, "°C")
+print("Average Temperature :", round(average, 2), "°C")
