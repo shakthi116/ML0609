@@ -1,0 +1,33 @@
+# Restaurant Billing System
+
+print("----- Restaurant Billing System -----")
+
+# Input customer name
+customer_name = input("Enter Customer Name: ")
+
+# Input ordered food items
+item1 = float(input("Enter Price of Item 1: Rs. "))
+item2 = float(input("Enter Price of Item 2: Rs. "))
+item3 = float(input("Enter Price of Item 3: Rs. "))
+
+# Calculate subtotal
+subtotal = item1 + item2 + item3
+
+# Calculate GST (5%)
+gst = subtotal * 0.05
+
+# Calculate Service Charge (10%)
+service_charge = subtotal * 0.10
+
+# Calculate Total Bill
+total_bill = subtotal + gst + service_charge
+
+# Display Bill
+print("\n----- Customer Bill -----")
+print("Customer Name   :", customer_name)
+print("Subtotal        : Rs.", subtotal)
+print("GST (5%)        : Rs.", gst)
+print("Service Charge  : Rs.", service_charge)
+print("Total Bill      : Rs.", total_bill)
+
+print("\nThank You! Visit Again.")
