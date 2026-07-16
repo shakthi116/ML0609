@@ -1,0 +1,23 @@
+# Blood Donation Eligibility Checker
+
+print("----- Blood Donation Eligibility Checker -----")
+
+# Input
+donor_name = input("Enter Donor Name: ")
+age = int(input("Enter Age: "))
+weight = float(input("Enter Weight (kg): "))
+hemoglobin = float(input("Enter Hemoglobin Level (g/dL): "))
+
+# Check eligibility
+if age >= 18 and age <= 65 and weight >= 50 and hemoglobin >= 12.5:
+    status = "Eligible to Donate Blood"
+else:
+    status = "Not Eligible to Donate Blood"
+
+# Display Result
+print("\n----- Donation Eligibility Report -----")
+print("Donor Name        :", donor_name)
+print("Age               :", age, "years")
+print("Weight            :", weight, "kg")
+print("Hemoglobin Level  :", hemoglobin, "g/dL")
+print("Eligibility Status:", status)
