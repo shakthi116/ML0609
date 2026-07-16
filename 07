@@ -1,0 +1,24 @@
+# Bank Interest Calculator
+
+print("----- Bank Interest Calculator -----")
+
+# Input
+principal = float(input("Enter Principal Amount (Rs.): "))
+rate = float(input("Enter Annual Interest Rate (%): "))
+time = float(input("Enter Time (in years): "))
+
+# Calculate Simple Interest
+simple_interest = (principal * rate * time) / 100
+
+# Calculate Compound Interest
+amount = principal * (1 + rate / 100) ** time
+compound_interest = amount - principal
+
+# Display Results
+print("\n----- Interest Details -----")
+print("Principal Amount      : Rs.", principal)
+print("Rate of Interest      :", rate, "%")
+print("Time                  :", time, "years")
+print("Simple Interest (SI)  : Rs.", round(simple_interest, 2))
+print("Compound Interest (CI): Rs.", round(compound_interest, 2))
+print("Amount after CI       : Rs.", round(amount, 2))
