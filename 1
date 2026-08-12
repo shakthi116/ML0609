@@ -1,0 +1,18 @@
+data = [
+    ['Sunny', 'Warm', 'Normal', 'Strong', 'Yes'],
+    ['Sunny', 'Warm', 'High', 'Strong', 'Yes'],
+    ['Rainy', 'Cold', 'High', 'Strong', 'No'],
+    ['Sunny', 'Warm', 'High', 'Weak', 'Yes']
+]
+
+h = ['0', '0', '0', '0']
+
+for row in data:
+    if row[-1] == 'Yes':
+        for i in range(4):
+            if h[i] == '0':
+                h[i] = row[i]
+            elif h[i] != row[i]:
+                h[i] = '?'
+
+print("Most Specific Hypothesis:", h)
