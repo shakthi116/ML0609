@@ -1,0 +1,26 @@
+import math
+
+X = [[0,0], [0,1], [1,0], [1,1]]
+Y = [0, 1, 1, 0]
+
+w1, w2, b = 0.5, 0.5, -0.7
+lr = 0.5
+
+def sigmoid(x):
+    return 1/(1+math.exp(-x))
+
+for epoch in range(1000):
+    for x, y in zip(X, Y):
+        z = x[0]*w1 + x[1]*w2 + b
+        out = sigmoid(z)
+        error = y - out
+
+        w1 += lr * error * x[0]
+        w2 += lr * error * x[1]
+        b += lr * error
+
+print("Training Completed")
+
+for x in X:
+    out = sigmoid(x[0]*w1 + x[1]*w2 + b)
+    print(x, round(out, 2))
